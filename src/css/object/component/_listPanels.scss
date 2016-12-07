@@ -1,12 +1,17 @@
 .c-listPanels {
   display: flex;
   justify-content: center;
+  margin-top: 100px;
 
   .c-listBox {
     display: flex;
+    flex-direction: column;
     padding-right: 50px;
   }
   img.c-thum {
       width: 300px;
   }
+  a [
+    display: block;
+  ]
 }
