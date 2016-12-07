@@ -1,0 +1,12 @@
+.c-listPanels {
+  display: flex;
+  justify-content: center;
+
+  .c-listBox {
+    display: flex;
+    padding-right: 50px;
+  }
+  img.c-thum {
+      width: 300px;
+  }
+}
