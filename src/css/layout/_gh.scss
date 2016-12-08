@@ -1,31 +1,39 @@
 .l-gh {
   header {
-    font-family: $font-en;
-    h1 {
-      height: 200px;
-      font-size: 40px;
-      font-family: $font-en;
+    .ghTitle{
+      height: 160px;
+      margin-top: 80px;
       color: $main-font-color;
-      background-color: #EC9A29;
-      margin-top: 50px;
-      padding-top: 100px;
-      padding-left: 70px;
+    }
+    h1 {
+      font-size: 60px;
+      font-family: $font-en2;
+      font-weight: 700;
+      text-align: center;
+    }
+    div.subTitle {
+      margin-top: -25px;
+      font-size: 25px;
+      text-decoration: underline;
+      font-family: $font-en3;
+      text-align: center;
     }
   }
 
   nav {
+    margin-top: 50px;
     ul {
       display: flex;
       justify-content: center;
       li {
         display: block;
         list-style-type: none;
-        padding: 0 60px;
+        margin-right: 120px;
         a {
           color:$main-font-color;
+          }
         }
 
       }
     }
-  }
 }
