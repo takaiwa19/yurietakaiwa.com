@@ -12,3 +12,12 @@ body {
   color: #fff;
   background: rgba(0, 0, 0, 0.8);
 }
+
+a {
+  color: $main-font-color;
+
+  :hover {
+    color: #fff;
+    background-color: #DAD2D8;
+  }
+}

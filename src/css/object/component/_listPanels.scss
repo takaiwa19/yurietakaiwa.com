@@ -1,32 +1,41 @@
 .c-listPanels {
   display: flex;
   justify-content: center;
-  margin-top: 80px;
+  margin-bottom: 80px;
+}
 
-  .c-listBox {
+.c-listBox {
     display: flex;
     flex-direction: column;
+    height: 210px;
     margin-right: 30px;
     border: dotted 1px $main-font-color;
+    &:last-child {
+      margin-right: 0px;
+    }
   }
 
-  .c-listTitle {
-    height: 40px;
+.c-listInner {
+    display: flex;
+    flex-direction: column;
+    height: 210px;
+  }
+
+.c-listTitle {
     padding: 15px 10px;
     margin-top: -5px;
     font-family: $font-en3;
     font-size: 15px;
   }
 
-  .c-listFoot {
+.c-listFoot {
     margin-top: 5px;
     text-align: right;
   }
 
-  img.c-thum {
+.c-thum {
+    width: 200px;
+    img {
       width: 200px;
-  }
-  a {
-    display: block;
-  }
+    }
 }
