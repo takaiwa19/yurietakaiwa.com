@@ -1,2 +1,10 @@
 .l-page {
+  .l-column {
+    display: flex;
+    flex-direction: column;
+  }
+  .l-row {
+    display: flex;
+    flex-direction: row;
+  }
 }
