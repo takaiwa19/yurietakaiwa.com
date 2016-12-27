@@ -1,12 +1,28 @@
 {
   "meta": {
     "domain": "http://www.tplh.net",
-    "website_name": "website name",
+    "website_name": "Yurie's BLOG",
     "keywords": "keyword base"
   },
   "pages": {
     "index": {
       "title": "page title",
+      "keywords": "keyword1, keyword2",
+      "description": "page description",
+      "path": "/",
+      "ogp_description": "page ogp description",
+      "ogp_img": "ogp.jpg"
+    },
+    "picture": {
+      "title": "PICTURE",
+      "keywords": "keyword1, keyword2",
+      "description": "page description",
+      "path": "/",
+      "ogp_description": "page ogp description",
+      "ogp_img": "ogp.jpg"
+    },
+    "blog": {
+      "title": "BLOG",
       "keywords": "keyword1, keyword2",
       "description": "page description",
       "path": "/",
