@@ -1,7 +1,6 @@
 .l-gh {
   header {
-    border-bottom: 1px solid #dddddd;
-    margin-bottom: 80px;
+    margin-bottom: 120px;
     .ghTitle{
       height: 160px;
       margin-top: 80px;
@@ -23,25 +22,35 @@
       a:hover {
         background-color: #f5f5f5;
     }
-
-
   }
 
   nav {
     margin-top: 50px;
     margin-bottom: 40px;
+    border-top: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
     ul {
       display: flex;
       justify-content: center;
-      li {
+      list-style-type: none;
+      margin: 0;
+    }
+    li {
+      border-left: 1px solid #dddddd;
+      &:last-child {
+        border-right: 1px solid #dddddd;
+      }
+      a {
         display: block;
-        list-style-type: none;
-        margin-right: 120px;
-        &:last-child {
-          margin-right: 0px;
+        padding: 10px 60px;
+        &.navHome {
+          border: 1px solid $color-bluegreen;
+          color: $color-bluegreen;
         }
-        a:hover {
-          background-color: $color-yellow;
+        &:hover {
+          border: 1px solid $color-bluegreen;
+          background-color: $color-bluegreen;
+          color: #f5f5f5;
         }
       }
     }
