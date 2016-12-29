@@ -1,30 +1,20 @@
 .c-listpanels {
+  flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 50px;
   &__box {
     height: 300px;
-    margin-right: 40px;
-    &:last-child {
-      margin-right: 0px;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 50px;
+    a:hover {
+      color: $font-color-white;
+      background-color: $main-font-color;
     }
   }
   &__inner {
-    position: relative;
     height: 250px;
     border: dotted 1px $main-font-color;
     border-radius: 8px;
-    a {
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-    }
-    a:hover {
-      border-radius: 8px;
-      background-color: $font-color-white;
-      opacity: 0.3;
-    }
   }
   &__title {
     padding: 15px 10px;

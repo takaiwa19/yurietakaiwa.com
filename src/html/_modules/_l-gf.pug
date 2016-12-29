@@ -1,37 +1,24 @@
 .l-gf
   footer
-    div.c-footPanels.l-row
-      div.c-footPanels__profile.l-column
+    div.c-footPanels.u-row
+      div.c-footPanels__profile.u-column
         h2 PROFILE
-        section.c-footPanels__content.l-row
+        section.c-footPanels__content.u-row
           img(src="../img/test/profile_img.png", alt="")
         section.c-footPanels__content
         h3 Yurie.T
         |趣味：music
         br
         |好きな食べ物：カレー、チョコ
-      div.c-footPanels__category.l-column
+      div.c-footPanels__category.u-column
         h2 CATEGORY
-        section.c-footPanels__content.l-row
+        section.c-footPanels__content.u-row
           ul
-            li: a(href="#") HTML
-            li: a(href="#") CSS
-            li: a(href="#") Wordpress
-            li: a(href="#") pug
-            li: a(href="#") sass
-            li: a(href="#") JavaScript
+            each val in ["HTML", "CSS", "Wordpress", "pug", "sass", "JavaScript"]
+              li: a(href="#")= val
           ul
-            li: a(href="#") 旅写真
-            li: a(href="#") カレー
-            li: a(href="#") チョコ
-            li: a(href="#") HTML
-            li: a(href="#") HTML
-            li: a(href="#") HTML
+            each val in ["HTML", "CSS", "Wordpress", "pug", "sass", "JavaScript"]
+              li: a(href="#")= val
           ul
-            li: a(href="#") 旅写真
-            li: a(href="#") カレー
-            li: a(href="#") チョコ
-            li: a(href="#") HTML
-            li: a(href="#") HTML
-            li: a(href="#") HTML
-            
+            each val in ["HTML", "CSS", "Wordpress", "pug", "sass", "JavaScript"]
+              li: a(href="#")= val
