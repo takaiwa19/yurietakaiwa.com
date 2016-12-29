@@ -15,10 +15,6 @@ body {
 }
 
 a {
+  text-decoration: none;
   color: $main-font-color;
-
-  :hover {
-    color: #fff;
-    background-color: #DAD2D8;
-  }
 }

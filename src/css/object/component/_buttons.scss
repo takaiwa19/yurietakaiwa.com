@@ -10,11 +10,9 @@
 
 }
 
-a {
-  text-decoration: none;
-}
-
-a:hover {
+a.c-readButton  {
+ &:hover {
   color: $main-font-color;
   background-color: #DAD2D8;
+  }
 }

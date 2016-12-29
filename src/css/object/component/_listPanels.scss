@@ -1,44 +1,39 @@
-.c-listPanels {
+.c-listpanels {
   justify-content: center;
   margin-bottom: 50px;
-}
-
-.c-listBox {
-  height: 300px;
-  margin-right: 40px;
-  &:last-child {
-    margin-right: 0px;
+  &__box {
+    height: 300px;
+    margin-right: 40px;
+    &:last-child {
+      margin-right: 0px;
+    }
   }
-}
-
-.c-listInner {
-  position: relative;
-  height: 250px;
-  border: dotted 1px $main-font-color;
-  border-radius: 8px;
-  a {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-  }
-  a:hover {
+  &__inner {
+    position: relative;
+    height: 250px;
+    border: dotted 1px $main-font-color;
     border-radius: 8px;
-    background-color: $font-color-white;
-    opacity: 0.3;
+    a {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+    }
+    a:hover {
+      border-radius: 8px;
+      background-color: $font-color-white;
+      opacity: 0.3;
+    }
   }
-}
-
-
-.c-listTitle {
-  padding: 15px 10px;
-  margin-top: -5px;
-  font-size: 14px;
-}
-
-.c-listFoot {
-  text-align: right;
+  &__title {
+    padding: 15px 10px;
+    margin-top: -5px;
+    font-size: 14px;
+  }
+  &__foot {
+    text-align: right;
+  }
 }
 
 .c-thum {
