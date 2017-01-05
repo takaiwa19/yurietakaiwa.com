@@ -1,5 +1,7 @@
 .l-gh {
   header {
+    max-width: $max-width;
+    margin: 0 auto;
     margin-bottom: 120px;
     .ghTitle{
       height: 160px;

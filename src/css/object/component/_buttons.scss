@@ -16,3 +16,24 @@ a.c-readButton  {
   background-color: #DAD2D8;
   }
 }
+
+.c-prev-button {
+  display: inline-block;
+  width: 100px;
+  padding: 7px 15px;
+  color: $main-font-color;
+  background-color: #dddddd;
+  border-radius: 40px 0 0 0;
+  box-shadow: 5px 5px $main-font-color;
+}
+
+.c-next-button {
+  display: inline-block;
+  width: 100px;
+  padding: 7px 15px;
+  color: $main-font-color;
+  background-color: #dddddd;
+  margin-left: 20px;
+  border-radius: 0 0 40px 0;
+  box-shadow: 5px 5px $main-font-color;
+}

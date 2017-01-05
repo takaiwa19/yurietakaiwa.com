@@ -1,0 +1,35 @@
+img.c-blog-main-thum {
+  width: 680px;
+  height: 180px;
+  margin-top: 10px;
+}
+
+.c-blog-title {
+	position: relative;
+  width: 630px;
+	padding: 0 10px 10px 50px;
+	border-bottom: 2px solid #dddddd;
+  &::before,
+  &::after {
+  	position: absolute;
+  	content: '';
+  	border-radius: 100%
+  }
+  &::before {
+  	top: 6px;
+  	left: 6px;
+  	z-index: 2;
+  	width: 25px;
+  	height: 25px;
+  	background: $color-bluegreen;
+    opacity: 0.7;
+  }
+  &::after {
+  	top: 18px;
+  	left: 18px;
+  	width: 18px;
+  	height: 18px;
+  	background: $color-yellow;
+    opacity: 0.7;
+  }
+}
