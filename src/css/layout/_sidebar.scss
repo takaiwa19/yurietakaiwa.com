@@ -1,0 +1,17 @@
+.l-sidebar {
+  max-width: 300px;
+  margin: 40px;
+  &-title {
+    text-align: center;
+    font-size: 22px;
+  }
+  &-inner {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  &-thum {
+    img {
+      width: 150px;
+    }
+  }
+}

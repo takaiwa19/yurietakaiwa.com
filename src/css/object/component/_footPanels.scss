@@ -27,6 +27,20 @@
       }
     }
   }
-  p.c-profileName {
+
+.c-profileName {
     text-align: center;
-  }
+}
+
+.c-sns-icon-rect {
+  width: 38px;
+  height: 38px;
+  border-radius: 38px;
+  margin: 20px 20px 20px 0;
+  padding: 13px;
+  background-color: $main-font-color;
+}
+
+.cls-1 {
+  fill:$font-color-white;
+}

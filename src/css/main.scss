@@ -25,6 +25,7 @@
 // Layout
 // ==========================================================================
 @import "layout/_gh";
+@import "layout/_sidebar";
 @import "layout/_gf";
 @import "layout/_page";
 @import "layout/_layouts";
@@ -37,6 +38,7 @@
 // Component
 // -----------------------------------------------------------------
 // @import "object/component/_xxx";
+@import "object/component/_pageTop";
 @import "object/component/_listPanels";
 @import "object/component/_footPanels";
 @import "object/component/_picturePanels";
