@@ -1,9 +1,9 @@
 .c-readButton {
   display: inline-block;
   padding: 5px 12px;
-  margin: 10px 0px 10px 10px;
+  margin: 20px;
   text-align: right;
-  color: $color-yellow;
+  color: $font-color-white;
   background-color: $main-font-color;
   font-size: 12px;
   border-radius: 16px;
@@ -13,7 +13,7 @@
 a.c-readButton  {
  &:hover {
   color: $main-font-color;
-  background-color: $color-yellow;
+  background-color: $font-color-white;
   }
 }
 

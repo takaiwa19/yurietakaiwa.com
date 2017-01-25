@@ -9,6 +9,7 @@
     margin-right: 20px;
     margin-left: 20px;
     margin-bottom: 50px;
+    background-color: $color-bluegreen;
     a:hover {
       color: $font-color-white;
       background-color: $main-font-color;
@@ -23,13 +24,9 @@
       margin-bottom: 0;
     }
   }
-  &__inner {
-    height: 250px;
-    border: dotted 1px $main-font-color;
-    border-radius: 8px;
-  }
+
   &__title {
-    padding: 15px 10px;
+    padding: 15px 20px 0;
     margin-top: -5px;
     font-size: 14px;
   }
@@ -45,6 +42,5 @@
   width: 300px;
   img {
     width: 300px;
-    border-radius: 8px 8px 0 0;
   }
 }

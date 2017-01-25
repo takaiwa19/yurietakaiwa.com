@@ -1,7 +1,7 @@
 .l-gf {
   footer{
     height: 400px;
-    background-color: #EC9A29;
+    background-color: $color-yellow;
     margin-top: 150px;
   }
 }
@@ -9,7 +9,7 @@
   .l-gf {
     footer{
       height: auto;
-      background-color: #EC9A29;
+      background-color: $color-yellow;
       margin-top: 150px;
     }
   }

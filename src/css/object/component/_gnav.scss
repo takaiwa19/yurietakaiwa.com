@@ -4,13 +4,13 @@
   margin: 40px auto 100px;
   display: flex;
   justify-content: center;
-  border-top: 1px solid #dddddd;
-  border-bottom: 1px solid #dddddd;
+  // border-top: 1px solid #dddddd;
+  // border-bottom: 1px solid #dddddd;
   &__item {
-    border-left: 1px solid #dddddd;
-    &:last-child {
-      border-right: 1px solid #dddddd;
-    }
+    // border-left: 1px solid #dddddd;
+    // &:last-child {
+    //   border-right: 1px solid #dddddd;
+    // }
     vertical-align: middle;
     text-align: center;
   }
