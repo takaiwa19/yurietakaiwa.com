@@ -29,12 +29,12 @@
   width: 100%;
   display: block;
   opacity: 1;
-  animation: fade-in 3s ease 0s 1 normal;
+  animation: fade-in 3.5s ease 0s 1 normal;
 }
 
 @keyframes fade-in {
       0%{
-    		opacity:0.1;
+    		opacity:0.4;
     	}
     	100% {
     		opacity:1;
