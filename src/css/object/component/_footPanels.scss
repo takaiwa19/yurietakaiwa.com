@@ -1,6 +1,6 @@
-.c-footPanels{
+.c-footPanels {
   justify-content: flex-end;
-  padding: 20px 120px;
+  padding: 20px 200px;
   &__profile {
     margin-right: auto;
   }
@@ -10,8 +10,8 @@
   &__content {
     padding: 5px;
     img {
-      width: 40%;
-      height: 40%;
+      width: 128px;
+      height: 128px;
     }
     ul {
       margin: 0 100px 0 0;
@@ -27,6 +27,31 @@
       }
     }
   }
+@media (max-width: 900px) {
+  .c-footPanels {
+    padding: 20px 90px;
+  }
+}
+
+@media (max-width: 760px) {
+  .c-footPanels {
+    font-size: 80%;
+  }
+}
+
+@media (max-width: 540px) {
+  .c-footPanels {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding: 20px 40px;
+    &__content {
+      img {
+        width: 60%;
+        height: 60%;
+      }
+    }
+  }
+}
 
 .c-profileName {
     text-align: center;

@@ -1,7 +1,60 @@
-.c-picturePanel {
-  justify-content: center;
-  margin-bottom: 50px;
+.c-picturepanels {
+  width: 700px;
+  margin: 40px auto;
 }
 
-.c-pictureBox {
+.c-picturepanels-btn-area {
+  overflow: hidden;
+  margin: 10px 0;
+  font-family: $font-en3;
+  font-size: 22px;
+}
+
+.c-picturepanels-btn-prev {
+  float: left;
+  color: $main-font-color;
+}
+
+.c-picturepanels-btn-next {
+  float: right;
+}
+
+.c-picturepanels-title {
+  margin: 5px 0;
+  font-family: $font-en3;
+  font-size: 20px;
+}
+
+.c-picturepanels-box img {
+  width: 100%;
+  display: block;
+  opacity: 1;
+  animation: fade-in 3s ease 0s 1 normal;
+}
+
+@keyframes fade-in {
+      0%{
+    		opacity:0.1;
+    	}
+    	100% {
+    		opacity:1;
+    	}
+    }
+
+.c-picturepanels-cap {
+  margin: 5px 0;
+  font-family: $font-en3;
+  font-size: 16px;
+}
+
+@media (max-width: 760px) {
+  .c-picturepanels {
+    width: 90%;
+  }
+  .c-picturepanels-title {
+    font-size: 16px;
+  }
+  .c-picturepanels-cap {
+    font-size: 14px;
+  }
 }

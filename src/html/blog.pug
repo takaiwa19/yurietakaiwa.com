@@ -3,18 +3,23 @@ extends ./_layout/_page.pug
 block vars
   -
     var page = pages.blog;
+    var gnav_current = ['', 'is-current', '', ''];
+    var category = 'blog';
 
 block content
   h2.c-pageTitle BLOG
-  article.c-picturePanel.l-row
-    div.c-pictureBox.l-column
-      img.c-picturePanel__thum(src="/img/test/image1.jpg") 
-      p Kamikohchi Nagano 2016 
-  article.c-picturePanel.l-row
-    div.c-pictureBox.l-column
-      img.c-picturePanel__thum(src="/img/test/image1.jpg") 
-      p Kamikohchi Nagano 2016 
-  article.c-picturePanel.l-row
-    div.c-pictureBox.l-column
-      img.c-picturePanel__thum(src="/img/test/image1.jpg") 
-      p Kamikohchi Nagano 2016 
+  .l-cont-body
+    .c-blogpanels.u-column
+      -for (var i = 0; i < 5; i++) {
+      .c-blogpanels__box.u-row
+        a.c-blogpanels__box-head(href="/single.html")
+          img.c-blogpanels__thumb(src="/img/test/icon_css.png", alt="")
+        .c-blogpanels__box-sub
+          p.c-blogpanels__date 2017.01.05
+          h3.c-blogpanels__title
+            a(href="/single.html") 
+              |nodebrewのインストール、起動
+      - }
+      .c-blogpanels__pagenation
+
+          

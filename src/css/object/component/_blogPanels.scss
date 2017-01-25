@@ -1,0 +1,27 @@
+.c-blogpanels {
+  &__box {
+    justify-content: center;
+    height: 120px;
+    padding: 20px 40px;
+    border-bottom: 2px dotted #dddddd;
+  }
+  &__box-head {
+    height: 90px;
+    margin-right: 20px;
+  }
+  &__box-sub {
+    height: 90px;
+    margin: 0 20px;
+  }
+  &__thumb {
+    width: 90px;
+  }
+  &__date {
+    margin: 20px 0 0;
+  }
+  &__title {
+    font-size: 20px;
+    padding: 0;
+    margin-bottom: 0;
+  }
+}

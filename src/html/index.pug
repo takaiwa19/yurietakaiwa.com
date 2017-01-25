@@ -3,18 +3,23 @@ extends ./_layout/_page.pug
 block vars
   -
     var page = pages.index;
+    var gnav_current = ['is-current', '', '', ''];
+    var category = 'home';
 
 block content
   .c-listpanels.u-row
-    - for (var i = 0; i < 9; i++) {
+    - for (var i = 0; i < 6; i++) {
       .c-listpanels__box.u-column 
-        a(href="#").c-listpanels__inner.u-column 
-          .c-thum
+        a(href="/single.html").c-listpanels__inner.u-column 
+          .c-listpanels-thum
             img(src="/img/test/pc_typying.jpg") 
           h2.c-listpanels__title 
-            |WEBデザイナーへの道 #{i + ', ' + i % 3}
+            |#{i+1 + '.'}nodebrewのインストール、起動
             br
             |2016.12.10
         .c-listpanels__foot
           a.c-readButton(href="#") READ MORE
     - }
+    
+    
+    

@@ -3,6 +3,7 @@ block vars
 include ../_mixin/_common.pug
 include ../_mixin/_svg.pug
 
+
 doctype html
 html(lang="ja")
   head
@@ -10,7 +11,9 @@ html(lang="ja")
   body
     .l-page
       include ../_modules/_l-gh.pug
+      include ../_modules/_c-gnav.pug
       block content
-      include ../_modules/_l-sidebar.pug
+      .c-body-wrap
+      //- include ../_modules/_l-sidebar.pug
       include ../_modules/_l-gf.pug
     include ../_modules/_script.pug

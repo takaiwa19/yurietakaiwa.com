@@ -3,18 +3,15 @@ extends ./_layout/_page.pug
 block vars
   -
     var page = pages.picture;
+    var gnav_current = ['', '', 'is-current'];
+    var category = 'picture';
 
 block content
   h2.c-pageTitle PICTURE
-  article.c-picturePanel.u-row
-    div.c-pictureBox.u-column
-      img.c-picturePanel__thum(src="/img/test/image1.jpg") 
-      p Kamikohchi Nagano 2016 
-  article.c-picturePanel.u-row
-    div.c-pictureBox.l-column
-      img.c-picturePanel__thum(src="/img/test/image1.jpg") 
-      p Kamikohchi Nagano 2016 
-  article.c-picturePanel.u-row
-    div.c-pictureBox.l-column
-      img.c-picturePanel__thum(src="/img/test/image1.jpg") 
-      p Kamikohchi Nagano 2016 
+  .c-picturepanels
+    .c-picturepanels-box
+    .c-picturepanels-btn-area
+      button.c-picturepanels-btn-prev <<
+      button.c-picturepanels-btn-next >>
+    h3.c-picturepanels-title
+    p.c-picturepanels-cap

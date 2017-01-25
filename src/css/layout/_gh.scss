@@ -2,7 +2,7 @@
   header {
     max-width: $max-width;
     margin: 0 auto;
-    margin-bottom: 120px;
+    margin-bottom: 80px;
     .ghTitle{
       height: 160px;
       margin-top: 80px;
@@ -25,34 +25,15 @@
         background-color: #f5f5f5;
     }
   }
-
-  nav {
-    margin-top: 50px;
-    margin-bottom: 40px;
-    border-top: 1px solid #dddddd;
-    border-bottom: 1px solid #dddddd;
-    ul {
-      display: flex;
-      justify-content: center;
-      list-style-type: none;
-      margin: 0;
-    }
-    li {
-      border-left: 1px solid #dddddd;
-      &:last-child {
-        border-right: 1px solid #dddddd;
+  @media (max-width: 540px) {
+    header {
+      width: 90%;
+      margin-bottom: 40px;
+      .ghTitle{
+        margin-top: 50px;
       }
-      a {
-        display: block;
-        padding: 10px 60px;
-        &.navHome {
-          color: $color-bluegreen;
-        }
-        &:hover {
-          border: 1px solid $color-bluegreen;
-          background-color: $color-bluegreen;
-          color: #f5f5f5;
-        }
+      .ghTitle a {
+        font-size: 40px;
       }
     }
   }

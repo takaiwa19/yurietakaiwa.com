@@ -5,3 +5,9 @@
   text-align: center;
   margin: 25px 120px;
 }
+@media (max-width: 760px) {
+  .c-pageTitle {
+    font-size: 25px;
+    margin: 20px auto;
+  }
+}

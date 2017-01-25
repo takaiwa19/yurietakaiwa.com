@@ -6,3 +6,14 @@
     width: 120px;
   }
 }
+
+@media (max-width: 540px) {
+  #pagetop {
+    position: fixed;
+    bottom: 0px;
+    right: 15px;
+    img {
+      width: 80px;
+    }
+  }
+}
