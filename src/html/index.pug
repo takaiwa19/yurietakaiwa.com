@@ -7,19 +7,67 @@ block vars
     var category = 'home';
 
 block content
-  .c-listpanels.u-row
-    - for (var i = 0; i < 6; i++) {
-      .c-listpanels__box.u-column 
-        a(href="/single.html").c-listpanels__inner.u-column 
-          .c-listpanels-thum
-            img(src="/img/test/pc_typying.jpg") 
-          h2.c-listpanels__title 
-            |#{i+1 + '.'}nodebrewのインストール、起動
-            br
-            |2016.12.10
-        .c-listpanels__foot
-          a.c-readButton(href="#") READ MORE
-    - }
-    
-    
-    
+  .l-cont-body.l-cont-body__index 
+    p.c-listpanels__main-title study
+    .c-listpanels.u-row
+      - for (var i = 0; i < 6; i++) {
+          if ( i == 0 || i%3 == 0 )
+            a(href="/single.html").c-listpanels__box.u-column
+              .c-listpanels-thum
+                img(src="/img/test/image1.jpg") 
+              span.c-listpanels__category JavaScript
+              h2.c-listpanels__title 
+                |#{i+1 + '.'}#{listpanels[i].title}
+              p.c-listpanels__date #{listpanels[i].date}
+                //- .c-listpanels__title__foot
+                //-   a(href="/single.html").c-readButton READ MORE
+                  
+          else if ( i == 1 || i%3 == 1)
+            a(href="/single.html").c-listpanels__box.c-listpanels__box--base-color.u-column
+              .c-listpanels-thum
+                img(src="/img/test/image2.jpeg") 
+              span.c-listpanels__category CSS
+              h2.c-listpanels__title 
+                |#{i+1 + '.'}#{listpanels[i].title}
+              p.c-listpanels__date #{listpanels[i].date}
+          else 
+            a(href="/single.html").c-listpanels__box.c-listpanels__box--accent-color.u-column
+              .c-listpanels-thum
+                img(src="/img/test/image1.jpg") 
+              .c-listpanels__category HTML
+              h2.c-listpanels__title 
+                |#{i+1 + '.'}#{listpanels[i].title}
+              p.c-listpanels__date #{listpanels[i].date}
+      - }
+
+    p.c-listpanels__main-title others
+    .c-listpanels.u-row
+      - for (var i = 0; i < 3; i++) {
+          if ( i == 0 || i%3 == 0 )
+            a(href="/single.html").c-listpanels__box.u-column
+              .c-listpanels-thum
+                img(src="/img/test/image1.jpg") 
+              .c-listpanels__category food
+              h2.c-listpanels__title 
+                |#{i+1 + '.'}#{listpanels[i].title}
+              p.c-listpanels__date #{listpanels[i].date}
+                //- .c-listpanels__title__foot
+                //-   a(href="/single.html").c-readButton READ MORE
+                  
+          else if ( i == 1 || i%3 == 1)
+            a(href="/single.html").c-listpanels__box.c-listpanels__box--base-color.u-column
+              .c-listpanels-thum
+                img(src="/img/test/image2.jpeg") 
+              .c-listpanels__category music
+              h2.c-listpanels__title 
+                |#{i+1 + '.'}#{listpanels[i].title}
+              p.c-listpanels__date #{listpanels[i].date}
+          else 
+            a(href="/single.html").c-listpanels__box.c-listpanels__box--accent-color.u-column
+              .c-listpanels-thum
+                img(src="/img/test/image1.jpg") 
+              .c-listpanels__category movie
+              h2.c-listpanels__title 
+                |#{i+1 + '.'}#{listpanels[i].title}
+              p.c-listpanels__date #{listpanels[i].date}
+      - }

@@ -1,6 +1,9 @@
 .l-cont-body {
   max-width: 680px;
   margin: 0 auto;
+  &__index {
+    max-width: $max-width;
+  }
 }
 
 .l-cont-foot {

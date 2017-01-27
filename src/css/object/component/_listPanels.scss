@@ -2,21 +2,22 @@
 .c-listpanels {
   flex-wrap: wrap;
   justify-content: center;
-  max-width: $max-width;
   margin: 0 auto;
+  padding: 20px 40px 20px;;
+  // background-color: $color-grey;
   &__box {
     height: 300px;
-    margin-right: 20px;
-    margin-left: 20px;
-    margin-bottom: 50px;
-    background-color: $color-bluegreen;
-    a:hover {
-      color: $font-color-white;
-      background-color: $main-font-color;
+    margin: 0 10px 20px;
+    // background-color: white;
+    &--base-color {
+      // background-color: $color-yellow;
+    }
+    &--accent-color {
+      // background-color: $color-bluegreen;
     }
       // 空の子パネル
     &.empty {
-      width: 302px;
+      width: 320px;
       height: 0;
       padding-top: 0;
       padding-bottom: 0;
@@ -24,23 +25,63 @@
       margin-bottom: 0;
     }
   }
-
+  &__box a {
+    display: block;
+  }
+  &__main-title {
+    font-family: $font-en3;
+    font-size: 28px;
+    text-decoration: underline;
+    padding-left: 80px;
+    margin: 0;
+  }
+  &__category{
+    font-size: 10px;
+    padding: 10px 10px 0;
+  }
   &__title {
-    padding: 15px 20px 0;
-    margin-top: -5px;
+    padding: 10px 10px 0;
+    margin: 0;
     font-size: 14px;
+    font-weight: lighter;
   }
-  &__foot {
-    text-align: right;
+  &__date {
+    margin: 10px 0 0;
+    padding: 0 10px 0;
+    font-size: 12px;
   }
+  // &__foot {
+  //   text-align: right;
+  // }
 }
-
 
 
 // サムネイル画像
 .c-listpanels-thum {
-  width: 300px;
+  width: 320px;
+  height: 180px;
+  overflow: hidden;
   img {
-    width: 300px;
+    width: 320px;
+  }
+}
+
+a.c-listpanels__box {
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+@media (max-width: 760px) {
+  .c-listpanels {
+    &__box {
+      width: 80%;
+    }
+  }
+  .c-listpanels-thum {
+    width: 100%;
+    img {
+      width: 100%;
+    }
   }
 }

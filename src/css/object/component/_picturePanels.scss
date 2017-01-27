@@ -29,7 +29,12 @@
   width: 100%;
   display: block;
   opacity: 1;
-  animation: fade-in 3.5s ease 0s 1 normal;
+}
+
+.c-picturepanels-cap {
+  margin: 5px 0;
+  font-family: $font-en3;
+  font-size: 16px;
 }
 
 @keyframes fade-in {
@@ -41,10 +46,8 @@
     	}
     }
 
-.c-picturepanels-cap {
-  margin: 5px 0;
-  font-family: $font-en3;
-  font-size: 16px;
+.c-picturepanels-box img, .c-picturepanels-btn-area, .c-picturepanels-title, .c-picturepanels-cap {
+  animation: fade-in 3.5s ease 0s 1 normal;
 }
 
 @media (max-width: 760px) {

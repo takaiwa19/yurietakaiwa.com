@@ -4,13 +4,8 @@
   margin: 40px auto 100px;
   display: flex;
   justify-content: center;
-  // border-top: 1px solid #dddddd;
-  // border-bottom: 1px solid #dddddd;
   &__item {
-    // border-left: 1px solid #dddddd;
-    // &:last-child {
-    //   border-right: 1px solid #dddddd;
-    // }
+    background-color: #eeeeee;
     vertical-align: middle;
     text-align: center;
   }
@@ -66,8 +61,6 @@
     border: none;
     &__item {
       width: 90px;
-      background-color: #dddddd;
-      border-left: none;
       &:last-child {
         border-right: none;
       }
