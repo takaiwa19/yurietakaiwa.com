@@ -1,8 +1,9 @@
 .c-footPanels {
   justify-content: flex-end;
   padding: 20px 160px;
+  font-family: $font-en3;
+  font-weight: bold;
   &__profile {
-    font-family: $font-en3;
     margin-right: auto;
   }
   &__category {
