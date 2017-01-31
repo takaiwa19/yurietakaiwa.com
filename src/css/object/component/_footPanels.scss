@@ -45,12 +45,15 @@
   .c-footPanels {
     justify-content: flex-start;
     flex-wrap: wrap;
-    padding: 20px 40px;
+    padding: 20px 50px;
     &__content {
       img {
         width: 60%;
         height: 60%;
       }
+    }
+    &__category {
+      margin-top: 40px;
     }
   }
 }
