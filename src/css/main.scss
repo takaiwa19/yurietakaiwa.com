@@ -45,7 +45,7 @@
 @import "object/component/_picturePanels";
 @import "object/component/_buttons";
 @import "object/component/_labels";
-@import "object/component/_blogPanels";
+@import "object/component/_workPanels";
 @import "object/component/_blogSingle";
 @import "object/component/_about";
 
@@ -64,3 +64,5 @@
 // Vendor
 // -----------------------------------------------------------------
 // @import "object/vendor/_xxx";
+@import "object/vendor/_slick-theme";
+@import "object/vendor/_slick";

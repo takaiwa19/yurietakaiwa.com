@@ -59,6 +59,7 @@ module.exports.vendorScripts = {
     `./${DIR.SRC}/js/vendor/jquery.js`,
     `./${DIR.SRC}/js/vendor/jquery.easing.js`,
     `./${DIR.SRC}/js/vendor/vue.js`,
+    `./${DIR.SRC}/js/vendor/slick.min.js`,
   ],
   concat: 'vendor.js',
   dest: `./${DIR.DEST}${DIR.PATH}/js/`
