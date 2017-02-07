@@ -106,6 +106,72 @@ window.onload = function(){
 };
 
 
+//pictureページinstagram gallery設定
+
+$(document).ready(function(){
+  var dataURL = 'https://api.instagram.com/v1/users/self/media/recent';
+  var photoData;
+
+  var getData = function(url){
+    $.ajax({
+      url: url,
+      dataType: 'jsonp',
+      data: {
+        access_token: '18048844.a72b84a.c1e9373230174c9f8e3b19ce7d50fedd',
+        count: 6
+      }
+    })
+    .done(function(data){
+      photoData = data;
+      // console.dir(photoData);
+      $(photoData.data).each(function(){
+        var caption = '';
+        if(this.caption) {
+          caption = this.caption.text;
+        }
+
+        $('#c-picturepanels-insta').append(
+          $('<div class="c-picturepanels-insta-box"></div>')
+          .append(
+            $('<a></a>')
+            .attr('href', this.link)
+            .attr('target', '_blank')
+            .append(
+              $('<img>').attr('src', this.images.low_resolution.url)
+            )
+            .append(
+              $('<p class="c-picturepanels-insta-caption"></p>').text(caption)
+            )
+            .append(
+              $('<p class="c-picturepanels-insta-likes"></p>').text(' ♡' + this.likes.count)
+            )
+          )
+
+        );
+      });
+      if($('#c-picturepanels-insta-pagination').children().length === 0){
+        $('#c-picturepanels-insta-pagination').append(
+          $('<a class="c-picturepanels-insta-next"></a>').attr('href', '#').text('MORE').on('click', function(e){
+            e.preventDefault();
+            if(photoData.pagination.next_url) {
+              getData(photoData.pagination.next_url);
+            }
+          })
+        );
+      }
+      if(!photoData.pagination.next_url) {
+        $('.c-picturepanels-insta-next').remove();
+      }
+    })
+    .fail(function(){
+      $('#c-picturepanels-insta').text(textStatus);
+    })
+  }
+
+  getData(dataURL);
+});
+
+
 //workページカルーセル設定
 $("document").ready(function(){
   $('.c-workpanels__slider').slick({

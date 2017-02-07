@@ -50,6 +50,60 @@
   animation: fade-in 3.5s ease 0s 1 normal;
 }
 
+#c-picturepanels-insta {
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.c-picturepanels-insta-box {
+  overflow: hidden;
+  box-sizing: border-box;
+  width: 33.333333%;
+  text-align: center;
+}
+
+.c-picturepanels-insta-box a {
+  display: block;
+  text-align: bottom;
+  min-height: 80px;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.c-picturepanels-insta-box img {
+  width: 90%;
+}
+
+#c-picturepanels-insta-pagination {
+  margin: 40px 0;
+  text-align: center;
+}
+
+.c-picturepanels-insta-caption {
+  margin: 5px 0 5px 0;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 80%;
+  color: #666;
+  text-align: center;
+}
+.c-picturepanels-insta-likes {
+  margin: 0 0 10px 0;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 80%;
+  color: #666;
+  text-align: center;
+}
+
 @media (max-width: 760px) {
   .c-picturepanels {
     width: 90%;
