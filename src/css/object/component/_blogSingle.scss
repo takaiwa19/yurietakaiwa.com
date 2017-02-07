@@ -61,3 +61,11 @@
   font-size: 14px;
   line-height: 1.9em;
 }
+
+@media (max-width: 760px) {
+  .c-single-title {
+    width: 80%;
+    padding: 0 0 10px 50px;
+    font-size: 18px;
+  }
+}
