@@ -2,9 +2,9 @@ extends ./_layout/_page.pug
 
 block vars
   -
-    var page = pages.blog;
+    var page = pages.about;
     var gnav_current = ['', '', '', 'is-current'];
-    var category = 'blog';
+    var category = 'about';
 
 block content
   .l-cont-body
@@ -19,4 +19,6 @@ block content
         |And I'm glad that this blog can be helpful for people who study same as me.
         br
         |Sometimes I would mistake, so please advise me, too!!
+    canvas#c-canvas__container(width="680" height="1000")
+    
         

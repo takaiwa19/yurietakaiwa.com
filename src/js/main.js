@@ -28,6 +28,14 @@ for (i = 0; i < $grid.find('.c-listpanels__box').length; i++) {
 $grid.append(emptyCells);
 
 
+//indexページのlistpanels__boxを時間差で表示
+$(function(){
+  $.each($('.c-listpanels-thum').children('img'), function(index) {
+    $(this).hide();
+    $(this).delay(index * 500).fadeIn(500);
+  });
+});
+
 
 // ページ上部へのスクロール
 
@@ -185,3 +193,50 @@ $("document").ready(function(){
     centerPadding: '20%'
   });
 });
+
+// aboutページc-canvas__container
+  var canvas = document.querySelector('canvas');
+  var ctx = canvas.getContext('2d');
+
+  window.requestAnimFrame = (function(){
+          return  window.requestAnimationFrame   ||
+              window.webkitRequestAnimationFrame ||
+              window.mozRequestAnimationFrame    ||
+              window.oRequestAnimationFrame      ||
+              window.msRequestAnimationFrame     ||
+              function(callback){
+                  window.setTimeout(callback, 1000 / 60);
+              };
+      })();
+
+  function drawCircle(x, y, scale, color) {
+    ctx.fillStyle = color;
+    ctx.beginPath();
+    ctx.arc(x, y, scale, 0, 2*Math.PI, false);
+    ctx.fill();
+  }
+
+  function drawRect(x, y, w, h, color) {
+    ctx.fillStyle = color;
+    ctx.beginPath();
+    ctx.fillRect(x, y, w, h);
+    ctx.fill();
+  }
+
+var speed = 100;    //移動速度
+var x = 0;      //X軸の位置
+
+loop();
+
+// ループ処理
+function loop() {
+    requestAnimFrame(loop);
+    ctx.clearRect(0,0, ctx.canvas.width, ctx.canvas.height);
+    // ループ毎にxを加算
+    x += (340 - x) / speed;
+    // 円を描画
+    drawRect(x, 50, 30, 30, '#A9C52F');
+    drawCircle(680-1/3*x, 150, 40, '#2C5D63');
+    drawRect(1/2*x, 300, 30, 30, '#A9C52F');
+    drawCircle(x, 400, 40, '#2C5D63');
+}
