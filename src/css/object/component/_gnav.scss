@@ -1,16 +1,15 @@
 .c-gnav {
   max-width: $max-width;
-  height: 38px;
   margin: 40px auto 100px;
   display: flex;
   justify-content: center;
   &__item {
     background-color: #eeeeee;
-    vertical-align: middle;
-    text-align: center;
   }
   &__item-link {
     display: block;
+    vertical-align: middle;
+    text-align: center;
     padding: 10px 60px;
     &.is-current, &:hover {
       color: $font-color-white;

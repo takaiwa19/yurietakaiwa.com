@@ -2,10 +2,15 @@
   margin: 40px 0 60px;
   text-align: center;
   &-thum {
-    width: 680px;
+    max-width: $max-width;
+    margin: 0 auto;
+  }
+  &-thum img{
+    width: 320px;
     height: 180px;
+    margin: 0 auto;
     }
-  &-desription {
+  &-description {
     margin-top: 20px;
     font-size: 13px;
   }
@@ -55,14 +60,30 @@
   	background-color: $color-bluegreen;
   }
 }
-
 .c-blog-cont {
   margin-bottom: 60px;
   font-size: 14px;
   line-height: 1.9em;
 }
+.c-blog-link {
+  color: $color-bluegreen;
+  text-decoration: underline;
+  &:hover {
+    color: #dddddd;
+  }
+}
+.c-blog-highlight {
+  color: $font-color-white;
+  background-color: $color-bluegreen;
+}
 
 @media (max-width: 760px) {
+  .c-blog-main {
+    &-thum img{
+      width: 90%;
+      height: auto;
+      }
+    }
   .c-single-title {
     width: 80%;
     padding: 0 0 10px 50px;
