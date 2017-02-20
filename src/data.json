@@ -1,33 +1,41 @@
 {
   "meta": {
-    "domain": "http://www.tplh.net",
+    "domain": "http://www.yurietakaiwa.com",
     "website_name": "Yurie's BLOG",
-    "keywords": "keyword base"
+    "keywords": "web designer, ウェブデザイナー"
   },
   "pages": {
     "index": {
-      "title": "page title",
+      "title": "HOME",
       "keywords": "keyword1, keyword2",
       "description": "page description",
       "path": "/",
-      "ogp_description": "page ogp description",
-      "ogp_img": "ogp.jpg"
+      "ogp_description": "webデザイナーの見習いのブログ！おすすめの本や、たまに好きな物、事の話。",
+      "ogp_img": "ogp_index.jpg"
     },
     "picture": {
       "title": "PICTURE",
       "keywords": "keyword1, keyword2",
       "description": "page description",
       "path": "/",
-      "ogp_description": "page ogp description",
-      "ogp_img": "ogp.jpg"
+      "ogp_description": "webデザイナーの見習いのブログ！写真のページ。",
+      "ogp_img": "ogp_index.jpg"
     },
-    "blog": {
-      "title": "BLOG",
+    "work": {
+      "title": "WORK",
       "keywords": "keyword1, keyword2",
       "description": "page description",
       "path": "/",
-      "ogp_description": "page ogp description",
-      "ogp_img": "ogp.jpg"
+      "ogp_description": "webデザイナーの見習いのブログ！作品のページ。",
+      "ogp_img": "ogp_index.jpg"
+    },
+    "about": {
+      "title": "ABOUT",
+      "keywords": "keyword1, keyword2",
+      "description": "page description",
+      "path": "/",
+      "ogp_description": "webデザイナーの見習いのブログ！私について。",
+      "ogp_img": "ogp_index.jpg"
     }
   },
   "listpanels": [
