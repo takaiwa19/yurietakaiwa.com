@@ -1,0 +1,27 @@
+.c-searchform {
+  text-align: center;
+  height: 30px;
+  margin-bottom: 20px;
+  &-text{
+    margin-right: 10px;
+  }
+  input[type="submit"] {
+    display: none;
+  }
+  &-icon{
+    vertical-align: middle;
+    cursor: pointer;
+  }
+  &-fill {
+    fill: $color-bluegreen;
+    &:hover {
+      fill: #dddddd;
+      transition: 0.3s;
+    }
+  }
+}
+@media (max-width: 760px) {
+  .c-searchform {
+    margin-right: 0;
+  }
+}
