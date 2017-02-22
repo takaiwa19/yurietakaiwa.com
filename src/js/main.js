@@ -237,6 +237,6 @@ function loop() {
     // 円を描画
     drawRect(x, 50, 30, 30, '#A9C52F');
     drawCircle(680-1/3*x, 150, 40, '#2C5D63');
-    drawRect(1/2*x, 300, 30, 30, '#A9C52F');
-    drawCircle(x, 400, 40, '#2C5D63');
+    drawCircle(680-2/3*x, 500, 30, '#A9C52F');
+    drawRect(1/3*x, 250, 80, 80, '#2C5D63');
 }
