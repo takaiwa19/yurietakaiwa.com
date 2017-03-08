@@ -29,12 +29,26 @@ $grid.append(emptyCells);
 
 
 //indexページのlistpanels__boxを時間差で表示
-$(function(){
-  $.each($('.c-listpanels-thum').children('img'), function(index) {
-    $(this).hide();
-    $(this).delay(index * 500).fadeIn(500);
+// $(function(){
+//   $.each($('.c-listpanels-thum').children('img'), function(index) {
+//     $(this).hide();
+//     $(this).delay(index * 500).fadeIn(500);
+//   });
+// });
+
+
+//indexページのlistpanels__boxをスクロールで順にfadein
+  $('.c-listpanels__box').css('visibility', 'hidden');
+  $(window).scroll(function(){
+    var windowHeight = $(window).height();
+    var topWindow = $(window).scrollTop();
+    $('.c-listpanels__box').each(function(){
+      var targetPosition = $(this).offset().top;
+      if(topWindow > targetPosition - windowHeight + 1/3 * windowHeight) {
+        $(this).addClass('fade-in-down');
+      }
+    });
   });
-});
 
 
 // ページ上部へのスクロール

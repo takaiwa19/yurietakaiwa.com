@@ -4,10 +4,9 @@
   justify-content: center;
   margin: 0 auto;
   padding: 20px 40px 20px;;
-  // background-color: $color-grey;
   &__box {
     height: 300px;
-    margin: 0 10px 20px;
+    margin: 0 15px 30px;
     // background-color: white;
     &--base-color {
       // background-color: $color-yellow;
@@ -23,6 +22,16 @@
       padding-bottom: 0;
       margin-top: 0;
       margin-bottom: 0;
+    }
+    @keyframes fadeInDown {
+      0% { opacity: 0; transform: translateY(-20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    &.fade-in-down {
+     animation-fill-mode:both;
+     animation-duration:1s;
+     animation-name: fadeInDown;
+     visibility: visible !important;
     }
   }
   &__box a {
@@ -77,7 +86,7 @@ a.c-listpanels__box {
   .c-listpanels {
     &__box {
       width: 90%;
-      height: auto;
+      height: 200px;
       margin-bottom: 30px;
     }
     &__main-title {
@@ -101,7 +110,8 @@ a.c-listpanels__box {
   }
   .c-listpanels-thum {
     width: 100%;
-    height: auto;
+    height: 56.25%;
+    overflow: hidden;
     img {
       width: 100%;
       height: auto;
