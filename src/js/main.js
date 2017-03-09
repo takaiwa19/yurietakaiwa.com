@@ -14,6 +14,24 @@ const init = () => {
 }
 init();
 
+//スクロールした時にgnavがトップに固定
+var nav = $('.c-gnav');
+var navItem = $('.c-gnav__item');
+var navTop = nav.offset().top;
+
+$(window).scroll(function(){
+  var winTop = $(this).scrollTop();
+  if(winTop >= navTop) {
+    nav.addClass('fixed');
+    navItem.addClass('fixed');
+  }
+  else if(winTop <= navTop){
+    nav.removeClass('fixed');
+    navItem.removeClass('fixed');
+  }
+});
+
+
 
 // indexページのlistpanelsで最後の列で要素が足りなかった時、左寄せにする。
 var $grid = $('.c-listpanels'),
