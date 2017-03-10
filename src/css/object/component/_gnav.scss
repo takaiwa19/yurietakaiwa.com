@@ -1,9 +1,13 @@
 .c-gnav {
   max-width: $max-width;
+  height: 38px;
   margin: 40px auto 100px;
   display: flex;
   justify-content: center;
+  position: relative;
+  z-index: 10;
   &.fixed {
+    max-width: 100%;
     width: 100%;
     position: fixed;
     top: 0;
@@ -11,12 +15,16 @@
     z-index: 10;
   }
   &__item {
-    background-color: #eeeeee;
+    // background-color: #eeeeee;
     &.fixed {
       width: 25%;
+      .c-gnav__item-link {
+        padding: 25px 60px;
+      }
     }
   }
   &__item-link {
+    background-color: #eeeeee;
     display: block;
     vertical-align: middle;
     text-align: center;
@@ -56,9 +64,20 @@
         background-color: $color-bluegreen;
       }
     }
+    &--category {
+      background-color: $color-bluegreen;
+      &:hover {
+        background-color: $main-font-color;
+      }
+    }
   }
   &__item-wrap {
     vertical-align: middle;
+  }
+  &__toggle {
+    &-wrap {
+      display: none;
+    }
   }
 }
 @media (max-width: 760px) {
@@ -68,10 +87,19 @@
     font-size: 12px;
     flex-wrap: wrap;
     border: none;
+    &.fixed {
+      max-width: 100%;
+    }
     &__item {
       width: 40%;
       &:last-child {
         border-right: none;
+      }
+      &.fixed {
+        width: 50%;
+        .c-gnav__item-link {
+          padding: 10px 20px;
+        }
       }
     }
     &__item-link {

@@ -32,6 +32,13 @@ $(window).scroll(function(){
 });
 
 
+//gnavのcategory項目のtoggle
+var itemCategory = $('.c-gnav__item-link--category');
+
+$(itemCategory).mouseover(function(){
+  $(this).next().slideToggle();
+});
+
 
 // indexページのlistpanelsで最後の列で要素が足りなかった時、左寄せにする。
 var $grid = $('.c-listpanels'),
