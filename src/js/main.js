@@ -35,7 +35,8 @@ $(window).scroll(function(){
 //gnavのcategory項目のtoggle
 var itemCategory = $('.c-gnav__item-link--category');
 
-$(itemCategory).mouseover(function(){
+
+$(itemCategory).click(function(){
   $(this).next().slideToggle();
 });
 
@@ -234,7 +235,7 @@ $("document").ready(function(){
 });
 
 // aboutページc-canvas__container
-  var canvas = document.querySelector('canvas');
+  var canvas = document.getElementById('c-canvas__container');
   var ctx = canvas.getContext('2d');
 
   window.requestAnimFrame = (function(){
