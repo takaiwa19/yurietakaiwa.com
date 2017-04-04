@@ -14,30 +14,37 @@ const init = () => {
 }
 init();
 
+
+
 //スクロールした時にgnavがトップに固定
-var nav = $('.c-gnav');
-var navItem = $('.c-gnav__item');
-var navTop = nav.offset().top;
+// var nav = $('.c-gnav');
+// var navItem = $('.c-gnav__item');
+// var navTop = nav.offset().top;
+//
+// $(window).scroll(function(){
+//   var winTop = $(this).scrollTop();
+//   if(winTop >= navTop) {
+//     nav.addClass('fixed');
+//     navItem.addClass('fixed');
+//   }
+//   else if(winTop <= navTop){
+//     nav.removeClass('fixed');
+//     navItem.removeClass('fixed');
+//   }
+// });
 
-$(window).scroll(function(){
-  var winTop = $(this).scrollTop();
-  if(winTop >= navTop) {
-    nav.addClass('fixed');
-    navItem.addClass('fixed');
-  }
-  else if(winTop <= navTop){
-    nav.removeClass('fixed');
-    navItem.removeClass('fixed');
-  }
-});
 
-
-//gnavのcategory項目のtoggle
+// gnavのcategory項目のtoggle
 var itemCategory = $('.c-gnav__item-link--category');
 
-
-$(itemCategory).click(function(){
+$(itemCategory).bind('click', function() {
   $(this).next().slideToggle();
+});
+
+var hamburger = $(".c-gnav__hamburger");
+hamburger.click(function () {
+  hamburger.toggleClass("active");
+  $(".c-gnav__toggle-items").toggleClass("active");
 });
 
 

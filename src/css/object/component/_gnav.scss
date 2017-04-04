@@ -1,37 +1,26 @@
 .c-gnav {
-  max-width: $max-width;
-  width:100%;
-  height: 38px;
-  margin: 40px auto 100px;
   display: flex;
   justify-content: flex-start;
+  width:100%;
+  margin: 0 auto;
   position: relative;
   z-index: 10;
-  &.fixed {
-    max-width: 100%;
-    width: 100%;
-    height: auto;
-    position: fixed;
-    top: 0;
-    margin: 0;
-    z-index: 10;
-  }
+  height: 60px;
+  position: fixed;
+  top: 0;
   &__item {
     cursor: pointer;
-    // background-color: #eeeeee;
     width: 20%;
-    &.fixed {
-      .c-gnav__item-link {
-        padding: 25px 60px;
-      }
-    }
   }
   &__item-link {
     background-color: #eeeeee;
     display: block;
-    vertical-align: middle;
     text-align: center;
-    padding: 10px 60px;
+    padding: 20px 0;
+    line-height: 25px;
+    @media (max-width: 760px) {
+      line-height: 10px;
+    }
     &.is-current, &:hover {
       color: $font-color-white;
     }
@@ -74,49 +63,157 @@
       }
     }
   }
-  &__item-wrap {
-    vertical-align: middle;
+  &__hamburger {
+    display: inline-block;
+    transition: all .6s;
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    height: 65px;
+    background-color: #eeeeee;
+    &.active{
+      span {
+        &:nth-of-type(1) {
+          transform: translateY(9px) rotate(-45deg) ;
+        }
+        &:nth-of-type(2) {
+          opacity: 0;
+        }
+        &:nth-of-type(3) {
+          transform: translateY(-9px) rotate(45deg) ;
+        }
+        @media (max-width: 760px) {
+          &:nth-of-type(1) {
+            transform: translateY(8px) rotate(-45deg) ;
+          }
+          &:nth-of-type(2) {
+            opacity: 0;
+          }
+          &:nth-of-type(3) {
+            transform: translateY(-8px) rotate(45deg) ;
+          }
+        }
+        @media (max-width: 540px) {
+          &:nth-of-type(1) {
+            transform: translateY(7px) rotate(-45deg) ;
+          }
+          &:nth-of-type(2) {
+            opacity: 0;
+          }
+          &:nth-of-type(3) {
+            transform: translateY(-7px) rotate(45deg) ;
+          }
+        }
+      }
+    }
+    &-line {
+      display: inline-block;
+      transition: all .4s;
+      box-sizing: border-box;
+      position: absolute;
+      left: 0;
+      background-color: $main-font-color;
+      width: 30px;
+      height: 4px;
+      border-radius: 4px;
+      &:nth-of-type(1) {
+        top: 22px;
+        left: 40%;
+      }
+      &:nth-of-type(2) {
+        top: 31px;
+        left: 40%;
+      }
+      &:nth-of-type(3) {
+        top: 40px;
+        left: 40%;
+      }
+    }
   }
-  &__toggle {
-    &-wrap {
-      display: none;
+  &__toggle-items {
+    opacity: 0;
+    width: 50%;
+    position: fixed;
+    top: 60px;
+    left: 50%;
+    transform: translateX(100%);
+    transition: 0.6s;
+    @media (max-width: 760px) {
+      top: 50px;
+    }
+    &.active {
+      opacity: 0.8;
+      transform: translateX(0%);
+    li {
+      overflow: visible;
+      height: 60px;
+      @media (max-width: 760px) {
+        height: 50px;
+      }
     }
   }
 }
+}
 @media (max-width: 760px) {
   .c-gnav {
-    max-width: 90%;
     height: 33px;
     @include fontSize(12);
     flex-wrap: wrap;
     border: none;
-    &.fixed {
-      display: none;
+    &__hamburger {
+      height: 50px;
+      &-line {
+        width: 25px;
+        height: 3px;
+        border-radius: 4px;
+        &:nth-of-type(1) {
+          top: 14px;
+          left: 40%;
+        }
+        &:nth-of-type(2) {
+          top: 22px;
+          left: 40%;
+        }
+        &:nth-of-type(3) {
+          top: 30px;
+          left: 40%;
+        }
+      }
     }
     &__item {
       width: 20%;
       &:last-child {
         border-right: none;
       }
-      &.fixed {
-        width: 50%;
-        .c-gnav__item-link {
-          padding: 10px 20px;
-        }
-      }
     }
     &__item-link {
-      padding: 10px 20px;
+      padding: 20px 0;
     }
-  }
 }
-@media (max-width: 540px) {
-  .c-gnav {
-    @include fontSize(9);
-    max-width: 100%;
-    margin: 30px auto 80px;
-    &__item {
-      width: 20%;
+  @media (max-width: 540px) {
+    .c-gnav {
+      &__item {
+        width: 20%;
+      }
+      &__hamburger {
+        &-line {
+          width: 20px;
+          height: 3px;
+          border-radius: 4px;
+          &:nth-of-type(1) {
+            top: 16px;
+            left: 30%;
+          }
+          &:nth-of-type(2) {
+            top: 23px;
+            left: 30%;
+          }
+          &:nth-of-type(3) {
+            top: 30px;
+            left: 30%;
+          }
+        }
+      }
     }
   }
 }
