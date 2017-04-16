@@ -5,6 +5,14 @@ block vars
     var page = pages.picture;
     var gnav_current = ['', '', 'is-current'];
     var category = 'picture';
+    var slideGalleryData = [
+      {label:1, color:"#BCE7FD"},
+      {label:2, color:"#C492B1"},
+      {label:3, color:"#AF3B6E"},
+      {label:4, color:"#BCE7FD"},
+      {label:5, color:"#C492B1"},
+      {label:6, color:"#C492B1"}
+    ];
 
 block content
   h2.c-pageTitle PICTURE
@@ -15,6 +23,29 @@ block content
       button.c-picturepanels-btn-next >>
     h3.c-picturepanels-title
     p.c-picturepanels-cap
+      
+  h2.c-pageTitle Slide Gallery
+  .p-slide-gallery
+    .p-slide-gallery-body(
+      data-slide-gallery = slideGalleryData
+    )
+      .p-slide-gallery-inner
+        //- .p-slide-gallery-item
+        //- .p-slide-gallery-item
+        //- .p-slide-gallery-item
+        //- .p-slide-gallery-item
+        //- .p-slide-gallery-item
+    .p-slide-gallery-controler
+      .p-slide-gallery-controler-button.p-slide-gallery-controler-button--prev
+        |<
+      .p-slide-gallery-controler-button.p-slide-gallery-controler-button--next
+        |>
+        
+      
+      
+    
+      
+
   
   h2.c-pageTitle Instagram Gallery
   .c-picturepanels  

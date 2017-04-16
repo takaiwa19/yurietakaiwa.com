@@ -1,5 +1,7 @@
 import initCommon from './init/common.js'
 import initIndex from './init/index.js'
+import SlideGallery from './modules/SlideGallery.js'
+
 
 const { pathname } = window.location;
 
@@ -14,6 +16,11 @@ const init = () => {
 }
 init();
 
+//slideGallery
+const galleries = [];
+$('.p-slide-gallery-body').each(function(index, element){
+  galleries[index] = new SlideGallery($(element));
+});
 
 
 //スクロールした時にgnavがトップに固定
