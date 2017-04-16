@@ -11,7 +11,7 @@ export default class SlideGallery {
   init() {
     this.buildGallery();
     this.buildNext();
-    // this.buildPrev();
+    this.buildPrev();
   }
   buildGallery() {
     let str = [];
@@ -45,6 +45,26 @@ export default class SlideGallery {
             str = $('.p-slide-gallery-inner').children();
             strLength = str.length - 1;
         });
+    });
+  }
+  buildPrev() {
+    let str = this.$inner.children();
+    let strLength = str.length - 1;
+      $('.p-slide-gallery-controler-button--prev').on('click',function(){
+        $('.p-slide-gallery-inner').animate({
+          'marginLeft':'0'
+        }
+        ,function(){
+            $('.p-slide-gallery-inner').html(str[strLength]);
+            $('.p-slide-gallery-inner').append(str[strLength]);
+            for (var i = 0; i < strLength; i++) {
+              $('.p-slide-gallery-inner').append(str[i])
+            }
+            $('.p-slide-gallery-inner').css('margin-left', '-33.33333333%');
+            str = $('.p-slide-gallery-inner').children();
+            strLength = str.length - 1;
+        }
+      );
     });
   }
 
